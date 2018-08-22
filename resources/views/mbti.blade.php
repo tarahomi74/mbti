@@ -9,6 +9,10 @@
 
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('1.ico')}}" />
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <!--<link rel="stylesheet" type="MTBI/css" href="{{asset('css/MTBI.css')}}">
     <link rel="stylesheet" type="MTBI/css" href="{{asset('css/dezain.css')}}">
     <link rel="stylesheet" type="MTBI/css" href="{{asset('css/dezain2.css')}}">
@@ -24,151 +28,35 @@
             margin: 0;
             padding: 0;
         }
-        #menu{
-            height: 30px;
-            width: 100%;
-            margin-bottom: 20px;
-
-
-        }
-        ul{
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #262728;
-        }
-        li{
-            float: right;
-        }
-
-        li a{
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 16px;
-            text-decoration:none;
-
-        }
-        li a:hover{
-            background-color: #444;
-            border: 1px solid #B6B7BC;
-            box-shadow: 0 0 10px #000;
-            -moz-box-shadow: 0 0 10px #000;
-            -webkit-box-shadow: 0 0 10px #000;
-            -moz-transition: visibility 0s linear.3s;
-            border-radius: 5px;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-        }
-        header {
+        #header {
             position: relative;
-            height: 150px;
-            border-bottom: 1px solid #807E7D;
-        }
-
-        header > div {
-            width: 100%;
-            height: 100%;
-        }
-        #heder{
-
-            width: 100%;
-            position: relative;
-            height: 120px;
-            background: #034A73 url('../Images/Mobile/Header.gif') no-repeat top center;
+            height: 50px;
+            background: #034A73 url('/public/is.jpg') no-repeat top center;
             background-size: contain;
             padding-top: 20px;
-            float: right;
-        }
-        div.MenuBar {
-            width: 100%;
-            height: 100px;
-            background: url('../Images/Tablet/Menu.png') repeat-x;
         }
 
-        div#menu {
-            width: 100%;
-            padding: 0;
-            margin: 0;
-        }
-
-        div#menu a {
-            text-decoration: none;
-        }
-
-        input[type=button].menuButton {
-            font-size: 11px;
-            font-weight: 200;
-            margin: 34px 0 0 0;
-            padding: 0 0 6px 0;
-            width: 104px;
-            height: 53px;
-            line-height: 30px;
-            background: url('../Images/Tablet/MenuButton.png') no-repeat 0 0;
-            box-shadow: none;
-            -moz-box-shadow: none;
-            border: none;
-            float: right;
-        }
-
-        input[type=button].menuButton:hover {
-            background: url('../Images/Tablet/MenuButton-Over.png') no-repeat;
-            box-shadow: none;
-            -moz-box-shadow: none;
-            filter: initial;
-        }
-
-        .toggled-Menus {
-            display: none !important;
-        }
-        #page {
-            padding-left: 2px;
-
-        }
 
 
     </style>
 
 </head>
-<body style="background-color: rgb(3, 74, 115);">
-        <div id="menu">
-            <ul>
-                <li style="margin-right: 10px"><a href="#">صفحه اصلي</a> </li>
-                <li><a href="#">اعضاء</a> </li>
-                <li><a href="#">تبليغات</a> </li>
-                <li style="margin-left: 62%"><a href="#">تماس با ما</a> </li>
-                <li><a href="#">ورود</a> </li>
-                <li><a href="#">ثبت نام</a> </li>
-            </ul>
-
-        </div>
-
-
-    <header>
-        <div id="heder">
-
-        </div>
-
-
-    </header>
-    <div id="page">
-        <div class="MenuBar">
-            <div id="menu">
-                <input type="button" class="menuButton" value="کهن الگوها" title="آرکتایپهای شخصیتی" onclick='redirectUrl("/ArcheTypes");' />
-                <input type="button" class="menuButton" value="قهرمان درون" title="قهرمان درون" onclick='redirectUrl("/HeroWithin");' />
-                <input type="button" class="menuButton" value="MBTI" title="تیپهای شخصیتی میرز بریگز" onclick='redirectUrl("/MBTI");' />
-                <input type="button" class="menuButton" value="DISC" title="رفتار شناسی DISC" onclick='redirectUrl("/DISC");' />
-                <input type="button" class="menuButton" value="مزاج شناسی" title="مزاج شناسی" onclick='redirectUrl("/Temperaments");' />
-                <input type="button" class="menuButton" value="گروه های خونی" title="گروه های خونی" onclick='redirectUrl("/BloodGroups");' />
-            </div>
-
-        </div>
-
-
-
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-right">
+            <li class=""><a href="#">تماس با ما</a></li>
+            <li><a href="#">تبليغات</a></li>
+            <li><a href="#">اعضا</a></li>
+            <li class="active"><a href="#"><img src="{{asset('Home.png')}}"></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>ثبت نام</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> ورود</a></li>
+        </ul>
     </div>
 
+</nav>
 
 
 
